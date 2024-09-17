@@ -2,8 +2,8 @@ const { createApp, ref } = Vue;
 
 createApp({
   data() {
-      const catImg = null;
-      const dogImg = null;
+    const catImg=""
+    const dogImg=""
     return {
       catImg,
       dogImg
@@ -14,11 +14,10 @@ createApp({
       try {
         const response = await fetch(`http://localhost:3000/cat-dog?textCat=${this.textCat}`);
         const data = await response.json();
-        console.log(data)
-        console.log(data.catImg);
         this.catImg = data.catImg;
         this.dogImg = data.dogImg;
-        console.log(catImg);
+        console.log('Cat image:', this.catImg);
+        console.log('Dog image:', this.dogImg);
       }catch (error){
         console.error('Error al obtener las imágenes:', error);
       }

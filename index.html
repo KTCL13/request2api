@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+
     <div id="app">
         <h2>CATAAS & Dog api</h2>
         <p>Obten una imagen con el texto deseado de un gato y aparte la de un perro aleatorio</p>
@@ -14,8 +15,11 @@
         <button @click="getImages()">Obtener Imagenes</button>
   
         <h2>Imagenes</h2>
-        <img src={{catImg}} />
-        <img src={{dogImg}} />
+        <p>el gato llega un base64 incompleto porque la api no deja acceder a la imagen pero si se accede a la api desde el back</p>
+        <p>base64 {{catImg}}</p>
+        <img :src="catImg" alt="gato random" v-if="catImg" />
+        <img :src="dogImg" alt="perro random" v-if="dogImg" />
+
         <script src="/client.js"></script>
       </div>  
       
