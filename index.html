@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h2>CATAAS & Dog api</h2>
+        <p>Obten una imagen con el texto deseado de un gato y aparte la de un perro aleatorio</p>
+        <input v-model="textCat" placeholder="Escribe el texto para el gato" />
+        <button @click="getImages()">Obtener Imagenes</button>
+  
+        <h2>Imagenes</h2>
+        <img src={{catImg}} />
+        <img src={{dogImg}} />
+        <script src="/client.js"></script>
+      </div>  
+      
+</body>
+</html>
